@@ -5,177 +5,168 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Urban Optima | PBL 2026</title>
 
-<script src="saved_resource"></script>
 <script src="chart.js"></script>
 <link rel="stylesheet" href="all.min.css">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-.glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
-.gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; }
+.glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(15px); border:1px solid rgba(255,255,255,0.1); padding:40px; border-radius:20px; }
+.gradient-text { background: linear-gradient(90deg,#60a5fa,#a855f7); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+section { margin-bottom:80px; }
+h2 { margin-bottom:20px; }
 </style>
 </head>
 
 <body>
 
-<main class="max-w-6xl mx-auto px-6 pt-32 pb-32 space-y-32">
+<main style="max-width:1000px;margin:auto;padding:40px;">
 
 <!-- TITLE -->
-<section class="text-center">
-<div class="inline-block px-4 py-1 border border-slate-800 rounded-full text-slate-500 text-xs font-mono mb-6 uppercase tracking-widest">
-ID: 23FE10CSE00226
-</div>
+<section style="text-align:center;">
+<h1 class="gradient-text" style="font-size:50px;">URBAN OPTIMA</h1>
+<p><b>Registration ID:</b> 23FE10CSE00226</p>
+<p><i>AI-Driven Integrated Smart City Optimization Platform</i></p>
+</section>
 
-<h1 class="text-6xl font-extrabold mb-8 uppercase">
-<span class="gradient-text">URBAN OPTIMA</span>
-</h1>
-
-<p class="text-slate-400 max-w-4xl mx-auto italic text-lg leading-relaxed text-justify">
-Urban Optima is an AI-driven Integrated Smart City Optimization Platform that unifies waste management, traffic monitoring, air quality tracking, energy analytics, and water resource optimization into a centralized intelligent dashboard to enable data-driven urban governance.
+<!-- EXECUTIVE SUMMARY -->
+<section class="glass">
+<h2>Executive Summary</h2>
+<p>
+Urban Optima is a full-stack intelligent smart city platform integrating waste detection, environmental monitoring, predictive analytics, and real-time dashboard visualization. The system uses AI models and REST APIs to unify multiple urban domains into a centralized decision-support framework.
 </p>
 </section>
 
 <!-- PROBLEM -->
-<section class="grid md:grid-cols-2 gap-12">
-<div class="glass p-10 rounded-3xl border-l-4 border-blue-600">
-<h2 class="text-3xl font-bold mb-6">Problem Statement</h2>
-<p class="text-slate-400 text-justify">
-Modern cities suffer from fragmented infrastructure systems where waste management, traffic control, environmental monitoring, and energy systems operate independently. This lack of integration leads to inefficient decision-making, increased operational cost, delayed responses, and poor sustainability outcomes. A unified AI-based platform capable of aggregating multi-domain urban data is required to optimize smart city operations.
+<section class="glass">
+<h2>Problem Statement</h2>
+<p>
+Current urban systems operate in silos, leading to inefficient resource utilization, delayed responses, and sustainability issues. Cities require a centralized AI-driven system capable of aggregating, analyzing, and visualizing multi-domain urban data in real time.
 </p>
-</div>
+</section>
 
-<div class="space-y-6">
-<div class="glass p-6 rounded-3xl border-r-4 border-blue-500/50">
-<h3 class="text-blue-400 font-bold text-xs uppercase mb-2">Literature Review</h3>
-<p class="text-sm text-slate-500 italic">
-Existing smart city frameworks focus on single-domain optimization such as traffic analysis or waste detection. While IoT and AI integration is explored, scalable cross-domain platforms with modular backend architecture remain limited.
+<!-- LITERATURE -->
+<section class="glass">
+<h2>Literature Review</h2>
+<p>
+Research indicates that existing smart city systems primarily focus on isolated problem-solving approaches such as traffic congestion analysis or pollution monitoring. Limited cross-domain integration restricts holistic city optimization.
 </p>
-</div>
+</section>
 
-<div class="glass p-6 rounded-3xl border-r-4 border-purple-500/50">
-<h3 class="text-purple-400 font-bold text-xs uppercase mb-2">Research Gap</h3>
-<p class="text-sm text-slate-500 italic">
-Urban Optima bridges this gap by introducing a modular AI architecture that integrates multiple urban subsystems into one scalable and intelligent decision-support platform.
+<!-- RESEARCH GAP -->
+<section class="glass">
+<h2>Research Gap & Innovation</h2>
+<p>
+Urban Optima introduces a modular architecture integrating multiple subsystems through scalable REST APIs and AI-driven analytics, enabling unified smart governance.
 </p>
-</div>
-</div>
 </section>
 
 <!-- ARCHITECTURE -->
-<section class="space-y-12">
-<h2 class="text-4xl font-black text-center uppercase">
-System Architecture & Methodology
-</h2>
-
-<div class="grid md:grid-cols-3 gap-8">
-
-<div class="glass p-8 rounded-3xl text-center">
-<h3 class="font-bold mb-4 uppercase text-xs">Data Sources</h3>
-<p class="text-sm text-slate-500">
-• Waste image datasets<br>
-• Environmental APIs<br>
-• Traffic datasets<br>
-• User inputs
+<section class="glass">
+<h2>System Architecture</h2>
+<p>
+Frontend (React Dashboard) → Flask REST APIs → AI Processing Layer (YOLOv8 + Regression Models) → Data Analytics Engine → Visualization Module.
 </p>
-</div>
+</section>
 
-<div class="glass p-8 rounded-3xl text-center">
-<h3 class="font-bold mb-4 uppercase text-xs">AI & Backend Engine</h3>
-<p class="text-sm text-slate-500">
-• Flask REST APIs<br>
-• YOLOv8 (Object Detection)<br>
-• PyTorch Inference<br>
-• Regression Models<br>
-• Data preprocessing pipeline
+<!-- TECH STACK -->
+<section class="glass">
+<h2>Technology Stack</h2>
+<p>
+Frontend: React, Vite<br>
+Backend: Flask, Python<br>
+AI Framework: PyTorch, YOLOv8<br>
+Visualization: Chart.js<br>
+Deployment: GitHub Pages
 </p>
-</div>
+</section>
 
-<div class="glass p-8 rounded-3xl text-center">
-<h3 class="font-bold mb-4 uppercase text-xs">Frontend Dashboard</h3>
-<p class="text-sm text-slate-500">
-• React-based UI<br>
-• Real-time analytics<br>
-• Interactive visualizations<br>
-• Modular component structure
+<!-- MODEL EXPLANATION -->
+<section class="glass">
+<h2>Model Explanation</h2>
+<p>
+Waste Detection: YOLOv8 object detection model trained for classification.<br>
+Predictive Module: Regression-based forecasting models for environmental parameters.
 </p>
-</div>
-
-</div>
 </section>
 
 <!-- RESULTS -->
-<section class="glass p-12 rounded-3xl border-t-4 border-blue-500">
-<h2 class="text-3xl font-black mb-12 text-center uppercase">
-Results & Performance Evaluation
-</h2>
+<section class="glass">
+<h2>Performance Evaluation</h2>
 
-<div class="space-y-8">
-
-<div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-<h3 class="text-blue-400 font-bold mb-4">Waste Detection Model (YOLOv8)</h3>
-<p class="text-slate-400 text-sm leading-relaxed">
-Accuracy: <b>92%</b><br>
-Precision: <b>0.90</b><br>
-Recall: <b>0.88</b><br>
-F1 Score: <b>0.89</b>
+<p><b>Waste Detection Metrics:</b><br>
+Accuracy: 92%<br>
+Precision: 0.90<br>
+Recall: 0.88<br>
+F1 Score: 0.89
 </p>
-</div>
 
-<div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-<h3 class="text-purple-400 font-bold mb-4">Predictive Analytics (Regression Models)</h3>
-<p class="text-slate-400 text-sm leading-relaxed">
-RMSE: <b>4.12</b><br>
-MAE: <b>3.08</b><br>
-R² Score: <b>0.87</b>
+<p><b>Predictive Analytics Metrics:</b><br>
+RMSE: 4.12<br>
+MAE: 3.08<br>
+R² Score: 0.87
 </p>
-</div>
 
-<div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-<p class="text-slate-400 text-sm leading-relaxed text-justify">
-The YOLOv8 classification model achieved high precision-recall balance, ensuring reliable waste detection. The regression-based predictive module demonstrated low error margins and strong explanatory power (R² = 0.87), validating the robustness of forecasting mechanisms within the platform.
+<canvas id="resultsChart"></canvas>
+
+</section>
+
+<!-- COMPARISON -->
+<section class="glass">
+<h2>Comparative Analysis</h2>
+<p>
+Traditional systems lack integration and predictive capability. Urban Optima improves monitoring accuracy, reduces manual dependency, and enhances decision-making efficiency.
 </p>
-</div>
+</section>
 
-</div>
+<!-- CHALLENGES -->
+<section class="glass">
+<h2>Implementation Challenges</h2>
+<p>
+• Dataset quality and preprocessing<br>
+• Real-time API integration<br>
+• Backend-frontend synchronization<br>
+• Model optimization constraints
+</p>
 </section>
 
 <!-- FUTURE -->
-<section class="glass p-10 rounded-3xl border-l-4 border-purple-500">
-<h2 class="text-3xl font-bold mb-6">Future Scope</h2>
-<p class="text-slate-400 text-justify">
-• Cloud deployment with GPU acceleration<br>
-• IoT sensor integration for real-time monitoring<br>
-• Multi-city scalability framework<br>
-• Predictive traffic & pollution forecasting<br>
-• AI-driven governance decision support<br>
-• Smart resource allocation modeling
+<section class="glass">
+<h2>Future Scope</h2>
+<p>
+• IoT integration<br>
+• Cloud GPU deployment<br>
+• Multi-city scaling<br>
+• Advanced predictive modeling
 </p>
 </section>
 
 <!-- CREDITS -->
-<section class="text-center pt-10 border-t border-slate-900">
-<h2 class="text-xs font-black text-slate-600 uppercase mb-12">
-Academic Credits
-</h2>
-
-<div class="flex flex-wrap justify-center gap-10">
-
-<div class="glass px-12 py-8 rounded-3xl border-b-4 border-blue-600">
-<p class="text-xs text-blue-500 mb-2 uppercase">Project Guide</p>
-<p class="font-bold text-xl">Dr. Shishir Singh Chauhan</p>
-</div>
-
-<div class="glass px-12 py-8 rounded-3xl border-b-4 border-slate-700">
-<p class="text-xs text-slate-400 mb-2 uppercase">Student</p>
-<p class="font-bold text-xl">Pranjali Yeotikar</p>
-<p class="text-xs text-slate-500 mt-1">23FE10CSE00226</p>
-</div>
-
-</div>
+<section class="glass" style="text-align:center;">
+<h2>Academic Credits</h2>
+<p><b>Project Guide:</b> Dr. Shishir Singh Chauhan</p>
+<p><b>Student:</b> Pranjali Yeotikar</p>
 </section>
 
 </main>
+
+<script>
+const ctx = document.getElementById('resultsChart').getContext('2d');
+new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ['Traditional System','Urban Optima'],
+datasets: [{
+data: [70,92],
+backgroundColor: ['#1e293b','#3b82f6']
+}]
+},
+options: {
+responsive:true,
+plugins:{legend:{display:false}}
+}
+});
+</script>
 
 </body>
 </html>
