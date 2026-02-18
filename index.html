@@ -14,20 +14,10 @@
 body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
 .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
 .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-
-#timerContainer { background: #ffffff; color: #020617; box-shadow: 0 10px 40px rgba(0,0,0,0.8); border: 3px solid #3b82f6; z-index: 1000; }
-@keyframes flicker { 0%, 100% { background-color: #ffffff; } 50% { background-color: #fca5a5; } }
-.timer-warning { animation: flicker 1s infinite; border: 3px solid #ef4444 !important; color: #b91c1c !important; }
-.timer-stop { background-color: #991b1b !important; color: #ffffff !important; border: 3px solid #f87171 !important; animation: none; }
 </style>
 </head>
 
 <body onload="startTimer()">
-
-<div id="timerContainer" class="fixed bottom-10 right-10 px-8 py-4 rounded-3xl flex items-center gap-4 transition-all">
-<i class="fas fa-hourglass-start text-blue-600 text-2xl" id="timerIcon"></i>
-<span id="displayTime" class="text-4xl font-black font-mono tracking-tighter">00:00</span>
-</div>
 
 <main class="max-w-6xl mx-auto px-6 pt-48 pb-32 space-y-32">
 
@@ -40,8 +30,8 @@ ID: 23FE10CSE00226
 <span class="gradient-text">URBAN OPTIMA</span>
 </h1>
 
-<p class="text-slate-400 max-w-2xl mx-auto italic text-lg leading-relaxed border-l-2 border-blue-500/30 pl-6 text-left">
-"Urban Optima is an AI-driven integrated smart city optimization platform designed to unify waste management, traffic analytics, air quality monitoring, energy optimization, and water resource tracking into a centralized intelligent dashboard."
+<p class="text-slate-400 max-w-3xl mx-auto italic text-lg leading-relaxed text-justify">
+Urban Optima is an AI-driven Integrated Smart City Optimization Platform designed to unify multiple urban subsystems including Waste Management, Traffic Monitoring, Air Quality Tracking, Energy Analytics, and Water Resource Monitoring into a centralized intelligent dashboard for real-time monitoring and predictive decision-making.
 </p>
 </section>
 
@@ -49,17 +39,17 @@ ID: 23FE10CSE00226
 <div class="glass p-10 rounded-[2.5rem] flex flex-col justify-center border-l-4 border-blue-600">
 <h2 class="text-3xl font-extrabold mb-6">Problem Statement</h2>
 <p class="text-slate-400 leading-relaxed text-justify">
-Modern urban infrastructure systems operate independently, resulting in inefficient waste handling, traffic congestion, increasing pollution levels, and poor resource optimization. There is a need for a unified AI-powered platform capable of integrating multiple urban domains for real-time monitoring and predictive analysis.
+Modern urban cities suffer from fragmented infrastructure systems where waste management, traffic control, environmental monitoring, and resource allocation operate independently. This lack of integration results in inefficiencies, delayed decision-making, higher operational costs, and environmental degradation. There is a critical need for a unified AI-based platform capable of aggregating and analyzing cross-domain urban data in real time to enable smart governance and optimized city planning.
 </p>
 </div>
 
 <div class="space-y-6">
 <div class="glass p-7 rounded-3xl border-r-4 border-blue-500/50">
 <h3 class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">
-Literature Review / Market Research
+Literature Review / Existing Systems
 </h3>
 <p class="text-sm text-slate-500 italic">
-Existing smart city systems focus on isolated solutions such as traffic monitoring or waste tracking. Research emphasizes AI and IoT integration but lacks modular and scalable cross-domain architectures.
+Existing smart city solutions typically focus on isolated domains such as traffic congestion analysis or waste monitoring. Research emphasizes IoT sensor integration and AI analytics, but most solutions lack modular scalability and cross-domain data synchronization within a centralized architecture.
 </p>
 </div>
 
@@ -68,7 +58,7 @@ Existing smart city systems focus on isolated solutions such as traffic monitori
 Research Gap / Innovation
 </h3>
 <p class="text-sm text-slate-500 italic">
-Urban Optima integrates multiple smart city subsystems into one unified AI-driven platform with scalable backend architecture and predictive analytics capability.
+Urban Optima bridges this gap by introducing a modular AI-powered architecture that integrates multiple smart city domains within a unified platform. The system supports scalability, predictive analytics, and seamless frontend-backend communication, enabling data-driven governance.
 </p>
 </div>
 </div>
@@ -76,45 +66,54 @@ Urban Optima integrates multiple smart city subsystems into one unified AI-drive
 
 <section class="space-y-12">
 <h2 class="text-4xl font-black text-center uppercase tracking-tight">
-System <span class="text-blue-500">Methodology</span>
+System <span class="text-blue-500">Architecture & Methodology</span>
 </h2>
 
 <div class="grid md:grid-cols-3 gap-8">
+
 <div class="glass p-8 rounded-3xl text-center">
 <i class="fas fa-database text-blue-500 text-3xl mb-4"></i>
-<h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Dataset / Input</h3>
+<h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Data Sources</h3>
 <p class="text-sm text-slate-500">
-Image inputs for waste classification, external APIs for environmental monitoring, and structured datasets for predictive analytics.
+• Image data for waste classification<br>
+• Real-time APIs for environmental monitoring<br>
+• Structured datasets for predictive modeling<br>
+• User input from dashboard interface
 </p>
 </div>
 
 <div class="glass p-8 rounded-3xl text-center">
-<i class="fas fa-microchip text-purple-500 text-3xl mb-4"></i>
-<h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Model / Architecture</h3>
+<i class="fas fa-cogs text-purple-500 text-3xl mb-4"></i>
+<h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Backend & AI Engine</h3>
 <p class="text-sm text-slate-500">
-React Frontend → Flask REST APIs → YOLOv8 Waste Detection → Data Processing → Visualization Dashboard.
+• Flask REST APIs<br>
+• YOLOv8 for waste detection<br>
+• PyTorch-based inference engine<br>
+• Data preprocessing & validation layer
 </p>
 </div>
 
-<div class="glass p-8 rounded-3xl text-center border-2 border-green-500/20 bg-green-500/5">
-<i class="fab fa-python text-green-500 text-3xl mb-4"></i>
-<h3 class="font-bold mb-4 uppercase text-xs tracking-widest text-green-400">
-Live Execution
-</h3>
-<a href="https://pranjali999.github.io/urban-optima/" target="_blank"
-class="px-6 py-2 bg-green-600 rounded-full text-[10px] font-black hover:bg-green-500 transition">
-VIEW CODE / DEMO
-</a>
+<div class="glass p-8 rounded-3xl text-center">
+<i class="fas fa-desktop text-green-500 text-3xl mb-4"></i>
+<h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Frontend Dashboard</h3>
+<p class="text-sm text-slate-500">
+• React-based UI<br>
+• Interactive analytics visualization<br>
+• Real-time monitoring panels<br>
+• Modular component architecture
+</p>
 </div>
+
 </div>
 </section>
 
 <section class="glass p-12 rounded-[3.5rem] border-t-4 border-blue-500">
 <h2 class="text-3xl font-black mb-12 text-center uppercase tracking-tight">
-Results & <span class="text-blue-500">Analysis</span>
+Results & Performance Analysis
 </h2>
 
 <div class="grid md:grid-cols-2 gap-16 items-center">
+
 <div class="h-80">
 <canvas id="resultsChart"></canvas>
 </div>
@@ -122,16 +121,31 @@ Results & <span class="text-blue-500">Analysis</span>
 <div class="space-y-6">
 <div class="p-6 rounded-2xl bg-white/5 flex justify-between items-center border border-white/10 shadow-inner">
 <span class="text-slate-400 font-bold uppercase text-xs tracking-widest">
-Accuracy / Performance
+Waste Detection Accuracy
 </span>
 <span class="text-blue-400 font-mono font-black text-3xl">92%</span>
 </div>
 
-<p class="text-slate-500 text-sm italic text-justify leading-relaxed">
-The system demonstrates improved monitoring efficiency and detection accuracy compared to traditional systems.
+<div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+<p class="text-slate-400 text-sm leading-relaxed text-justify">
+The implemented YOLOv8-based detection module achieved an average classification accuracy of 92% under controlled testing conditions. The system demonstrated improved responsiveness, reduced manual monitoring effort, and scalable architecture for integration of additional smart city modules.
 </p>
 </div>
+
 </div>
+</div>
+</section>
+
+<section class="glass p-10 rounded-[2rem] border-l-4 border-purple-500">
+<h2 class="text-3xl font-extrabold mb-6">Future Scope</h2>
+<p class="text-slate-400 leading-relaxed text-justify">
+• Cloud deployment with GPU acceleration<br>
+• Real-time IoT sensor integration<br>
+• Multi-city scalability<br>
+• Predictive traffic and pollution modeling<br>
+• Smart governance decision-support system<br>
+• AI-driven policy simulation framework
+</p>
 </section>
 
 <section class="text-center pt-10 border-t border-slate-900">
@@ -152,7 +166,7 @@ Dr. Shishir Singh Chauhan
 
 <div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-slate-700">
 <p class="text-[9px] font-bold text-slate-400 mb-2 uppercase tracking-widest">
-Team Member
+Student
 </p>
 <p class="font-black text-xl text-slate-100">
 Pranjali Yeotikar
@@ -168,24 +182,11 @@ Pranjali Yeotikar
 </main>
 
 <script>
-let sec = 0;
-let timer = null;
-function startTimer() {
-timer = setInterval(() => {
-sec++;
-let m = Math.floor(sec / 60);
-let s = sec % 60;
-document.getElementById('displayTime').innerText =
-`${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
-if (sec >= 600) clearInterval(timer);
-},1000);
-}
-
 const ctx = document.getElementById('resultsChart').getContext('2d');
 new Chart(ctx, {
 type: 'bar',
 data: {
-labels: ['Existing Systems', 'Urban Optima'],
+labels: ['Traditional System', 'Urban Optima'],
 datasets: [{
 data: [70, 92],
 backgroundColor: ['#1e293b', '#3b82f6'],
