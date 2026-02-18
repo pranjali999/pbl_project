@@ -3,175 +3,188 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PBL Presentation | Urban Optima</title>
+<title>PBL Presentation | 2026</title>
 
+<script src="saved_resource"></script>
 <script src="chart.js"></script>
 <link rel="stylesheet" href="all.min.css">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
 body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-.glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); padding:40px; border-radius:25px; }
+.glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
 .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-section { margin-bottom:120px; }
+#timerContainer { background: #ffffff; color: #020617; box-shadow: 0 10px 40px rgba(0,0,0,0.8); border: 3px solid #3b82f6; z-index: 1000; }
 </style>
 </head>
 
 <body onload="startTimer()">
 
 <!-- TIMER -->
-<div id="timerContainer" style="position:fixed;bottom:30px;right:30px;background:white;color:black;padding:15px 30px;border-radius:25px;font-weight:bold;font-family:monospace;z-index:1000;box-shadow:0 10px 30px rgba(0,0,0,0.6);">
-<span id="displayTime">00:00</span>
+<div id="timerContainer" class="fixed bottom-10 right-10 px-8 py-4 rounded-3xl flex items-center gap-4 transition-all">
+<span id="displayTime" class="text-4xl font-black font-mono tracking-tighter">00:00</span>
 </div>
 
-<main style="max-width:1100px;margin:auto;padding:60px;">
+<main class="max-w-6xl mx-auto px-6 pt-48 pb-32 space-y-32">
 
 <!-- TITLE -->
-<section style="text-align:center;">
-<h1 class="gradient-text" style="font-size:55px;">URBAN OPTIMA</h1>
-<p style="letter-spacing:3px;">ID: 23FE10CSE00226</p>
-<p style="font-style:italic;">AI-Driven Cross-Domain Smart City Optimization Platform</p>
+<section class="text-center">
+<div class="inline-block px-4 py-1 border border-slate-800 rounded-full text-slate-500 text-[10px] font-mono mb-6 uppercase tracking-widest">
+ID: 23FE10CSE00226
+</div>
+
+<h1 class="text-6xl md:text-7xl font-extrabold mb-8 uppercase leading-tight">
+<span class="gradient-text uppercase">Urban Optima</span>
+</h1>
+
+<p class="text-slate-400 max-w-2xl mx-auto italic text-lg leading-relaxed border-l-2 border-blue-500/30 pl-6 text-left">
+"Urban Optima is an AI-driven cross-domain smart city optimization platform integrating waste management, traffic monitoring, air quality analysis, energy systems, and water resources into a centralized intelligent dashboard for real-time monitoring and predictive governance."
+</p>
 </section>
 
 <!-- PROBLEM -->
-<section class="glass">
-<h2>Problem Statement</h2>
-<p>
-Urban infrastructures operate in isolated silos. Waste systems, traffic monitoring, air quality analysis, and energy systems lack unified intelligence. This results in inefficient decision-making, increased environmental impact, and poor resource allocation. There is a need for an AI-based centralized platform capable of performing cross-domain analytics for intelligent urban governance.
+<section id="problem" class="grid md:grid-cols-2 gap-12 items-stretch">
+<div class="glass p-10 rounded-[2.5rem] flex flex-col justify-center border-l-4 border-blue-600">
+<h2 class="text-3xl font-extrabold mb-6">Problem Statement</h2>
+<p class="text-slate-400 leading-relaxed text-justify">
+Modern urban systems operate independently across domains such as waste, traffic, pollution, and energy. This fragmented architecture results in inefficient decision-making, delayed responses, and poor resource allocation. A unified AI-based system capable of aggregating multi-domain data and performing cross-domain predictive analysis is required for intelligent governance.
 </p>
+</div>
+
+<div class="space-y-6">
+<div class="glass p-7 rounded-3xl border-r-4 border-blue-500/50">
+<h3 class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">
+Literature Review / Market Research
+</h3>
+<p class="text-sm text-slate-500 italic">
+Existing smart city solutions primarily focus on single-domain optimization such as traffic congestion analysis or waste detection. Although AI and IoT technologies are widely studied, scalable cross-domain integration platforms remain limited.
+</p>
+</div>
+
+<div class="glass p-7 rounded-3xl border-r-4 border-purple-500/50">
+<h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">
+Research Gap / Innovation
+</h3>
+<p class="text-sm text-slate-500 italic">
+Urban Optima introduces a modular AI architecture enabling cross-domain predictive analytics by correlating heterogeneous datasets to enhance forecasting accuracy and decision-making efficiency.
+</p>
+</div>
+</div>
 </section>
 
-<!-- LITERATURE -->
-<section class="glass">
-<h2>Literature Review</h2>
-<p>
-Existing smart city systems focus on domain-specific solutions such as traffic optimization or pollution monitoring. While IoT integration and AI-based systems exist, multi-domain integration with scalable modular architecture remains limited.
-</p>
-</section>
+<!-- METHODOLOGY -->
+<section id="methodology" class="space-y-12">
+<h2 class="text-4xl font-black text-center uppercase tracking-tight">
+System <span class="text-blue-500">Methodology</span>
+</h2>
 
-<!-- RESEARCH GAP -->
-<section class="glass">
-<h2>Research Gap & Innovation</h2>
-<p>
-Urban Optima introduces cross-domain predictive analytics by integrating heterogeneous urban datasets. The platform correlates waste density, traffic congestion, and environmental metrics to enable predictive decision-making rather than isolated forecasting.
-</p>
-</section>
+<div class="grid md:grid-cols-3 gap-8">
 
-<!-- ARCHITECTURE -->
-<section class="glass">
-<h2>System Architecture</h2>
-<p>
-Frontend (React Dashboard) → Flask REST APIs → AI Processing Layer (YOLOv8 + Regression Models) → Data Aggregation Layer → Visualization & Decision Support.
+<div class="glass p-8 rounded-3xl text-center">
+<h3 class="font-bold mb-2 uppercase text-xs tracking-widest">
+Dataset / Input
+</h3>
+<p class="text-sm text-slate-500">
+Image datasets for waste classification, environmental APIs, structured traffic data, and user input parameters. Preprocessing includes normalization, resizing, validation, and API parsing.
 </p>
-<br>
-<p>
-The architecture is modular, scalable, and supports integration of additional smart city domains.
-</p>
-</section>
+</div>
 
-<!-- CROSS DOMAIN -->
-<section class="glass">
-<h2>Cross-Domain Predictive Analysis</h2>
-<p>
-Urban Optima leverages multi-source urban datasets to perform predictive modeling across interconnected subsystems. For example, traffic congestion patterns can influence pollution levels, which correlate with waste accumulation in commercial zones. By applying multivariate regression techniques, the system improves forecasting reliability across domains.
+<div class="glass p-8 rounded-3xl text-center">
+<h3 class="font-bold mb-2 uppercase text-xs tracking-widest">
+Model / Architecture
+</h3>
+<p class="text-sm text-slate-500">
+Frontend (React Dashboard) → Flask REST APIs → YOLOv8 Object Detection + Regression Models → Data Aggregation → Visualization & Analytics.
 </p>
-</section>
+</div>
 
-<!-- TECH STACK -->
-<section class="glass">
-<h2>Technology Stack</h2>
-<p>
-Frontend: React + Vite<br>
-Backend: Flask REST APIs<br>
-AI Framework: PyTorch, YOLOv8<br>
-Analytics: Regression Models<br>
-Visualization: Chart.js<br>
-Deployment: GitHub Pages
-</p>
+<div class="glass p-8 rounded-3xl text-center border-2 border-green-500/20 bg-green-500/5">
+<h3 class="font-bold mb-4 uppercase text-xs tracking-widest text-green-400">
+Live Execution
+</h3>
+<a href="https://pranjali999.github.io/urban-optima/" target="_blank"
+class="px-6 py-2 bg-green-600 rounded-full text-[10px] font-black hover:bg-green-500 transition">
+VIEW DEMO
+</a>
+</div>
+
+</div>
 </section>
 
 <!-- RESULTS -->
-<section class="glass">
-<h2>Performance Evaluation</h2>
+<section id="results" class="glass p-12 rounded-[3.5rem] border-t-4 border-blue-500">
+<h2 class="text-3xl font-black mb-12 text-center uppercase tracking-tight">
+Results & Analysis
+</h2>
 
-<p><b>Waste Detection (YOLOv8)</b><br>
-Accuracy: 92%<br>
-Precision: 0.90<br>
-Recall: 0.88<br>
-F1 Score: 0.89
-</p>
+<div class="grid md:grid-cols-2 gap-16 items-center">
 
-<br>
-
-<p><b>Predictive Analytics (Regression Models)</b><br>
-RMSE: 4.12<br>
-MAE: 3.08<br>
-R² Score: 0.87
-</p>
-
-<br>
-
-<p>
-The regression metrics indicate low prediction error and strong explanatory power, validating the reliability of the cross-domain predictive module.
-</p>
-
-<br>
-
+<div class="h-80">
 <canvas id="resultsChart"></canvas>
+</div>
 
-</section>
+<div class="space-y-6">
+<div class="p-6 rounded-2xl bg-white/5 flex justify-between items-center border border-white/10 shadow-inner">
+<span class="text-slate-400 font-bold uppercase text-xs tracking-widest">
+Performance Metrics
+</span>
+<span class="text-blue-400 font-mono font-black text-3xl">92%</span>
+</div>
 
-<!-- COMPARISON -->
-<section class="glass">
-<h2>Comparative Analysis</h2>
-<p>
-Compared to traditional single-domain systems, Urban Optima demonstrates improved accuracy, predictive reliability, and integration efficiency through centralized analytics and AI-driven architecture.
+<p class="text-slate-500 text-sm italic text-justify leading-relaxed">
+Waste detection achieved 92% accuracy (Precision: 0.90, Recall: 0.88, F1 Score: 0.89). 
+The regression-based predictive module demonstrated RMSE of 4.12, MAE of 3.08, and R² score of 0.87, indicating low prediction error and strong explanatory capability across urban subsystems.
 </p>
+
+</div>
+</div>
 </section>
 
-<!-- CHALLENGES -->
-<section class="glass">
-<h2>Implementation Challenges</h2>
-<p>
-• Data preprocessing & normalization<br>
-• API synchronization<br>
-• Real-time model inference<br>
-• Backend scalability constraints
+<!-- TEAM -->
+<section id="team" class="text-center pt-10 border-t border-slate-900">
+<h2 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.5em] mb-12">
+Academic Credits
+</h2>
+
+<div class="flex flex-wrap justify-center gap-10">
+
+<div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-blue-600">
+<p class="text-[9px] font-bold text-blue-500 mb-2 uppercase tracking-widest">
+Project Guide
 </p>
-</section>
-
-<!-- FUTURE -->
-<section class="glass">
-<h2>Future Scope</h2>
-<p>
-• IoT sensor integration<br>
-• Cloud GPU deployment<br>
-• Multi-city scaling<br>
-• Advanced time-series forecasting<br>
-• Policy simulation modeling
+<p class="font-black text-xl text-slate-100">
+Dr. Shishir Singh Chauhan
 </p>
-</section>
+</div>
 
-<!-- CREDITS -->
-<section class="glass" style="text-align:center;">
-<h2>Academic Credits</h2>
-<p><b>Project Guide:</b> Dr. Shishir Singh Chauhan</p>
-<p><b>Student:</b> Pranjali Yeotikar</p>
-<p><b>Registration No:</b> 23FE10CSE00226</p>
+<div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-slate-700">
+<p class="text-[9px] font-bold text-slate-400 mb-2 uppercase tracking-widest">
+Team Member
+</p>
+<p class="font-black text-xl text-slate-100">
+Pranjali Yeotikar
+</p>
+<p class="text-[10px] text-slate-500 mt-1">
+23FE10CSE00226
+</p>
+</div>
+
+</div>
 </section>
 
 </main>
 
-<!-- GRAPH SCRIPT -->
+<!-- GRAPH -->
 <script>
 const ctx = document.getElementById('resultsChart').getContext('2d');
 new Chart(ctx, {
 type: 'bar',
 data: {
-labels: ['Accuracy','Precision','Recall','F1 Score','R²'],
+labels: ['Accuracy','Precision','Recall','F1','R²'],
 datasets: [{
 data: [92,90,88,89,87],
-backgroundColor: '#3b82f6'
+backgroundColor: ['#3b82f6','#60a5fa','#a855f7','#22c55e','#f59e0b'],
+borderRadius: 10
 }]
 },
 options: {
@@ -188,11 +201,11 @@ let sec = 0;
 function startTimer() {
 setInterval(() => {
 sec++;
-let m = Math.floor(sec/60);
-let s = sec%60;
+let m = Math.floor(sec / 60);
+let s = sec % 60;
 document.getElementById('displayTime').innerText =
-`${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
-},1000);
+`${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+}, 1000);
 }
 </script>
 
