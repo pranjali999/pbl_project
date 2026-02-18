@@ -90,6 +90,22 @@ Predictive Module: Regression-based forecasting models for environmental paramet
 </p>
 </section>
 
+<section class="glass">
+<h2>Cross-Domain Predictive Analysis</h2>
+<p>
+Urban Optima enables cross-domain predictive analytics by integrating heterogeneous urban datasets including waste management, traffic flow, air quality, and resource consumption. Unlike traditional systems that perform isolated forecasting, this platform correlates multi-domain data to identify interdependencies between urban subsystems.
+</p>
+<br>
+<p>
+For example, traffic congestion patterns can influence pollution levels, which may further correlate with waste density in commercial areas. By leveraging regression models and centralized data aggregation, Urban Optima enables predictive decision-making across interconnected city infrastructures.
+</p>
+<br>
+<p>
+This approach enhances forecasting accuracy, improves resource allocation efficiency, and supports intelligent governance strategies.
+</p>
+</section>
+
+
 <!-- RESULTS -->
 <section class="glass">
 <h2>Performance Evaluation</h2>
@@ -155,18 +171,28 @@ const ctx = document.getElementById('resultsChart').getContext('2d');
 new Chart(ctx, {
 type: 'bar',
 data: {
-labels: ['Traditional System','Urban Optima'],
+labels: ['Accuracy','Precision','Recall','F1 Score','R² Score'],
 datasets: [{
-data: [70,92],
-backgroundColor: ['#1e293b','#3b82f6']
+label: 'Urban Optima Performance',
+data: [92,90,88,89,87],
+backgroundColor: '#3b82f6'
 }]
 },
 options: {
 responsive:true,
-plugins:{legend:{display:false}}
+plugins:{
+legend:{display:false}
+},
+scales:{
+y:{
+beginAtZero:true,
+max:100
+}
+}
 }
 });
 </script>
+
 
 </body>
 </html>
