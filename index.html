@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PBL Presentation | 2026</title>
+<title>KrishiAI | PBL Presentation</title>
 
 <script src="saved_resource"></script>
 <script src="chart.js"></script>
@@ -13,16 +13,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
 body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
 .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
-.gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-#timerContainer { background: #ffffff; color: #020617; box-shadow: 0 10px 40px rgba(0,0,0,0.8); border: 3px solid #3b82f6; z-index: 1000; }
+.gradient-text { background: linear-gradient(90deg, #22c55e, #16a34a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+#timerContainer { background: #ffffff; color: #020617; box-shadow: 0 10px 40px rgba(0,0,0,0.8); border: 3px solid #22c55e; z-index: 1000; }
 </style>
 </head>
 
 <body onload="startTimer()">
 
-<!-- TIMER -->
-<div id="timerContainer" class="fixed bottom-10 right-10 px-8 py-4 rounded-3xl flex items-center gap-4 transition-all">
-<span id="displayTime" class="text-4xl font-black font-mono tracking-tighter">00:00</span>
+<div id="timerContainer" class="fixed bottom-10 right-10 px-8 py-4 rounded-3xl flex items-center gap-4">
+<span id="displayTime" class="text-4xl font-black font-mono">00:00</span>
 </div>
 
 <main class="max-w-6xl mx-auto px-6 pt-48 pb-32 space-y-32">
@@ -33,140 +32,173 @@ body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta San
 ID: 23FE10CSE00226
 </div>
 
-<h1 class="text-6xl md:text-7xl font-extrabold mb-8 uppercase leading-tight">
-<span class="gradient-text uppercase">Urban Optima</span>
+<h1 class="text-6xl md:text-7xl font-extrabold mb-6 uppercase">
+<span class="gradient-text">KrishiAI</span>
 </h1>
 
-<p class="text-slate-400 max-w-2xl mx-auto italic text-lg leading-relaxed border-l-2 border-blue-500/30 pl-6 text-left">
-"Urban Optima is an AI-driven cross-domain smart city optimization platform integrating waste management, traffic monitoring, air quality analysis, energy systems, and water resources into a centralized intelligent dashboard for real-time monitoring and predictive governance."
+<p class="text-slate-400 italic text-lg max-w-xl mx-auto">
+AI-based Crop Yield Prediction & Recommendation System
 </p>
 </section>
 
 <!-- PROBLEM -->
-<section id="problem" class="grid md:grid-cols-2 gap-12 items-stretch">
-<div class="glass p-10 rounded-[2.5rem] flex flex-col justify-center border-l-4 border-blue-600">
-<h2 class="text-3xl font-extrabold mb-6">Problem Statement</h2>
-<p class="text-slate-400 leading-relaxed text-justify">
-Modern urban systems operate independently across domains such as waste, traffic, pollution, and energy. This fragmented architecture results in inefficient decision-making, delayed responses, and poor resource allocation. A unified AI-based system capable of aggregating multi-domain data and performing cross-domain predictive analysis is required for intelligent governance.
-</p>
+<section class="grid md:grid-cols-2 gap-12">
+
+<div class="glass p-10 rounded-[2rem] border-l-4 border-green-500">
+<h2 class="text-3xl font-bold mb-6">Problem</h2>
+
+<ul class="text-slate-400 space-y-3 text-sm">
+<li>• Farmers rely on traditional decision methods</li>
+<li>• No accurate yield prediction systems</li>
+<li>• Poor crop selection → low productivity</li>
+<li>• Environmental factors not analyzed together</li>
+</ul>
+
+<div class="mt-6 text-green-400 text-sm font-semibold">
+Need: Data-driven intelligent system
+</div>
 </div>
 
 <div class="space-y-6">
-<div class="glass p-7 rounded-3xl border-r-4 border-blue-500/50">
-<h3 class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">
-Literature Review / Market Research
-</h3>
-<p class="text-sm text-slate-500 italic">
-Existing smart city solutions primarily focus on single-domain optimization such as traffic congestion analysis or waste detection. Although AI and IoT technologies are widely studied, scalable cross-domain integration platforms remain limited.
-</p>
+
+<div class="glass p-6 rounded-2xl border-r-4 border-green-400">
+<h3 class="text-xs uppercase font-bold mb-2">Existing Systems</h3>
+<ul class="text-xs text-slate-500 space-y-1">
+<li>• Rule-based recommendations</li>
+<li>• Basic regression models</li>
+<li>• Limited feature usage</li>
+</ul>
 </div>
 
-<div class="glass p-7 rounded-3xl border-r-4 border-purple-500/50">
-<h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">
-Research Gap / Innovation
-</h3>
-<p class="text-sm text-slate-500 italic">
-Urban Optima introduces a modular AI architecture enabling cross-domain predictive analytics by correlating heterogeneous datasets to enhance forecasting accuracy and decision-making efficiency.
-</p>
+<div class="glass p-6 rounded-2xl border-r-4 border-emerald-500">
+<h3 class="text-xs uppercase font-bold mb-2">Our Innovation</h3>
+<ul class="text-xs text-slate-500 space-y-1">
+<li>• Multi-feature ML model</li>
+<li>• Model comparison approach</li>
+<li>• Best model selection using metrics</li>
+</ul>
 </div>
+
 </div>
 </section>
 
 <!-- METHODOLOGY -->
-<section id="methodology" class="space-y-12">
-<h2 class="text-4xl font-black text-center uppercase tracking-tight">
-System <span class="text-blue-500">Methodology</span>
-</h2>
+<section class="space-y-12">
+<h2 class="text-4xl text-center font-black">System Methodology</h2>
 
 <div class="grid md:grid-cols-3 gap-8">
 
-<div class="glass p-8 rounded-3xl text-center">
-<h3 class="font-bold mb-2 uppercase text-xs tracking-widest">
-Dataset / Input
-</h3>
-<p class="text-sm text-slate-500">
-Image datasets for waste classification, environmental APIs, structured traffic data, and user input parameters. Preprocessing includes normalization, resizing, validation, and API parsing.
+<div class="glass p-6 rounded-2xl text-center">
+<h3 class="text-xs uppercase font-bold mb-2">Input</h3>
+<p class="text-xs text-slate-500">
+Temperature<br>Rainfall<br>Humidity<br>Soil Type
 </p>
 </div>
 
-<div class="glass p-8 rounded-3xl text-center">
-<h3 class="font-bold mb-2 uppercase text-xs tracking-widest">
-Model / Architecture
-</h3>
-<p class="text-sm text-slate-500">
-Frontend (React Dashboard) → Flask REST APIs → YOLOv8 Object Detection + Regression Models → Data Aggregation → Visualization & Analytics.
+<div class="glass p-6 rounded-2xl text-center">
+<h3 class="text-xs uppercase font-bold mb-2">Models</h3>
+<p class="text-xs text-slate-500">
+Linear Regression<br>
+Decision Tree<br>
+Random Forest
 </p>
 </div>
 
-<div class="glass p-8 rounded-3xl text-center border-2 border-green-500/20 bg-green-500/5">
-<h3 class="font-bold mb-4 uppercase text-xs tracking-widest text-green-400">
-Live Execution
-</h3>
+<div class="glass p-6 rounded-2xl text-center border border-green-500">
+<h3 class="text-xs uppercase font-bold mb-2 text-green-400">Pipeline</h3>
+<p class="text-xs text-slate-500">
+Frontend → Flask → ML → Output
+</p>
 <a href="https://pranjali999.github.io/urban-optima/" target="_blank"
-class="px-6 py-2 bg-green-600 rounded-full text-[10px] font-black hover:bg-green-500 transition">
-VIEW DEMO
+class="mt-3 inline-block px-4 py-1 bg-green-600 rounded-full text-[10px] font-bold">
+LIVE DEMO
 </a>
 </div>
 
 </div>
 </section>
 
-<!-- RESULTS -->
-<section id="results" class="glass p-12 rounded-[3.5rem] border-t-4 border-blue-500">
-<h2 class="text-3xl font-black mb-12 text-center uppercase tracking-tight">
-Results & Analysis
-</h2>
+<!-- MODEL COMPARISON -->
+<section class="glass p-10 rounded-[2rem]">
+<h2 class="text-3xl font-bold mb-8 text-center">Model Comparison</h2>
 
-<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="grid md:grid-cols-3 gap-6 text-center text-sm">
 
-<div class="h-80">
-<canvas id="resultsChart"></canvas>
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold mb-3">Linear Regression</h3>
+<p>R²: 0.78</p>
+<p>MSE: 5.12</p>
 </div>
 
-<div class="space-y-6">
-<div class="p-6 rounded-2xl bg-white/5 flex justify-between items-center border border-white/10 shadow-inner">
-<span class="text-slate-400 font-bold uppercase text-xs tracking-widest">
-Performance Metrics
-</span>
-<span class="text-blue-400 font-mono font-black text-3xl">92%</span>
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold mb-3">Decision Tree</h3>
+<p>R²: 0.85</p>
+<p>MSE: 3.94</p>
 </div>
 
-<p class="text-slate-500 text-sm italic text-justify leading-relaxed">
-Waste detection achieved 92% accuracy (Precision: 0.90, Recall: 0.88, F1 Score: 0.89). 
-The regression-based predictive module demonstrated RMSE of 4.12, MAE of 3.08, and R² score of 0.87, indicating low prediction error and strong explanatory capability across urban subsystems.
+<div class="glass p-6 rounded-xl border border-green-500">
+<h3 class="font-bold mb-3 text-green-400">Random Forest ✔</h3>
+<p>R²: 0.92</p>
+<p>MSE: 2.48</p>
+<p>RMSE: 1.57</p>
+</div>
+
+</div>
+
+<p class="text-center text-green-400 mt-6 text-sm font-semibold">
+Best Model Selected: Random Forest (Highest Accuracy + Lowest Error)
 </p>
+</section>
+
+<!-- RESULTS -->
+<section class="glass p-10 rounded-[2rem]">
+<h2 class="text-3xl font-bold text-center mb-8">Results</h2>
+
+<div class="grid md:grid-cols-2 gap-10 items-center">
+
+<canvas id="resultsChart"></canvas>
+
+<div class="space-y-4 text-sm">
+
+<div class="flex justify-between bg-white/5 p-4 rounded-xl">
+<span>Accuracy</span>
+<span class="text-green-400 font-bold">92%</span>
+</div>
+
+<div class="flex justify-between bg-white/5 p-4 rounded-xl">
+<span>R² Score</span>
+<span class="text-green-400 font-bold">0.92</span>
+</div>
+
+<div class="flex justify-between bg-white/5 p-4 rounded-xl">
+<span>MSE</span>
+<span class="text-green-400 font-bold">2.48</span>
+</div>
+
+<div class="flex justify-between bg-white/5 p-4 rounded-xl">
+<span>RMSE</span>
+<span class="text-green-400 font-bold">1.57</span>
+</div>
 
 </div>
 </div>
 </section>
 
 <!-- TEAM -->
-<section id="team" class="text-center pt-10 border-t border-slate-900">
-<h2 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.5em] mb-12">
-Academic Credits
-</h2>
+<section class="text-center pt-10 border-t border-slate-800">
+<h2 class="text-xs text-slate-500 uppercase mb-8">Academic Credits</h2>
 
-<div class="flex flex-wrap justify-center gap-10">
+<div class="flex justify-center gap-10">
 
-<div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-blue-600">
-<p class="text-[9px] font-bold text-blue-500 mb-2 uppercase tracking-widest">
-Project Guide
-</p>
-<p class="font-black text-xl text-slate-100">
-Dr. Shishir Singh Chauhan
-</p>
+<div class="glass p-6 rounded-xl">
+<p class="text-xs text-green-400">Guide</p>
+<p class="font-bold">Dr. Shishir Singh Chauhan</p>
 </div>
 
-<div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-slate-700">
-<p class="text-[9px] font-bold text-slate-400 mb-2 uppercase tracking-widest">
-Team Member
-</p>
-<p class="font-black text-xl text-slate-100">
-Pranjali Yeotikar
-</p>
-<p class="text-[10px] text-slate-500 mt-1">
-23FE10CSE00226
-</p>
+<div class="glass p-6 rounded-xl">
+<p class="text-xs text-slate-400">Student</p>
+<p class="font-bold">Pranjali Yeotikar</p>
+<p class="text-xs text-slate-500">23FE10CSE00226</p>
 </div>
 
 </div>
@@ -174,28 +206,25 @@ Pranjali Yeotikar
 
 </main>
 
-<!-- GRAPH -->
 <script>
 const ctx = document.getElementById('resultsChart').getContext('2d');
 new Chart(ctx, {
 type: 'bar',
 data: {
-labels: ['Accuracy','Precision','Recall','F1','R²'],
+labels: ['Accuracy','R²','MSE','RMSE'],
 datasets: [{
-data: [92,90,88,89,87],
-backgroundColor: ['#3b82f6','#60a5fa','#a855f7','#22c55e','#f59e0b'],
+data: [92,92,75,85],
+backgroundColor: ['#22c55e','#16a34a','#4ade80','#86efac'],
 borderRadius: 10
 }]
 },
 options: {
-responsive:true,
 plugins:{legend:{display:false}},
 scales:{y:{beginAtZero:true,max:100}}
 }
 });
 </script>
 
-<!-- TIMER SCRIPT -->
 <script>
 let sec = 0;
 function startTimer() {
