@@ -32,7 +32,7 @@ body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta San
 <span class="gradient-text">KrishiAI</span>
 </h1>
 
-<p class="text-xl text-slate-400 max-w-3xl mx-auto">
+<p class="text-2xl text-slate-400 max-w-3xl mx-auto">
 AI-powered crop yield prediction and recommendation system using machine learning and environmental data analysis.
 </p>
 </section>
@@ -41,18 +41,18 @@ AI-powered crop yield prediction and recommendation system using machine learnin
 <section class="grid md:grid-cols-2 gap-12">
 
 <div class="glass p-10 rounded-3xl">
-<h2 class="text-3xl font-bold mb-4 text-green-400">Problem</h2>
-<p class="text-slate-400 text-sm leading-relaxed">
-Farmers rely on traditional methods for crop decisions, leading to poor yield predictions. 
-Existing systems use limited parameters and fail to provide accurate, data-driven recommendations.
+<h2 class="text-3xl font-bold mb-4 text-green-400">Problem Statement</h2>
+<p class="text-lg text-slate-400 leading-relaxed">
+Farmers rely on traditional methods for crop decisions, leading to inaccurate predictions. 
+Existing systems consider limited parameters and fail to provide data-driven insights, resulting in low productivity and inefficient resource usage.
 </p>
 </div>
 
 <div class="glass p-10 rounded-3xl">
-<h2 class="text-3xl font-bold mb-4 text-green-400">Gap & Solution</h2>
-<p class="text-slate-400 text-sm leading-relaxed">
-No system effectively compares multiple ML models before prediction. 
-KrishiAI solves this by evaluating multiple models and selecting the best one using performance metrics.
+<h2 class="text-3xl font-bold mb-4 text-green-400">Research Gap & Solution</h2>
+<p class="text-lg text-slate-400 leading-relaxed">
+Most systems do not compare multiple machine learning models before prediction. 
+KrishiAI solves this by evaluating different models and selecting the best one using performance metrics such as R² and MSE.
 </p>
 </div>
 
@@ -66,23 +66,81 @@ KrishiAI solves this by evaluating multiple models and selecting the best one us
 
 <div class="glass p-8 rounded-2xl">
 <h3 class="font-bold mb-3">Input Data</h3>
-<p class="text-sm text-slate-400">
+<p class="text-lg text-slate-400">
 Temperature<br>Rainfall<br>Humidity<br>Soil Type
 </p>
 </div>
 
 <div class="glass p-8 rounded-2xl">
 <h3 class="font-bold mb-3">Models Used</h3>
-<p class="text-sm text-slate-400">
+<p class="text-lg text-slate-400">
 Linear Regression<br>Decision Tree<br>Random Forest
 </p>
 </div>
 
 <div class="glass p-8 rounded-2xl border border-green-500">
 <h3 class="font-bold mb-3 text-green-400">Workflow</h3>
-<p class="text-sm text-slate-400">
+<p class="text-lg text-slate-400">
 Frontend → Flask → ML → Output
 </p>
+</div>
+
+</div>
+</section>
+
+<!-- DATASET -->
+<section class="glass p-12 rounded-3xl space-y-8">
+<h2 class="text-3xl font-bold text-center">Dataset & Insights</h2>
+
+<p class="text-lg text-center text-slate-400 max-w-3xl mx-auto">
+The model was trained on agricultural datasets containing environmental parameters. 
+Analysis showed rainfall and soil type had the highest influence on crop yield prediction.
+</p>
+
+<div class="grid md:grid-cols-4 gap-6 text-center text-lg">
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-green-400">Features</h3>
+<p>Temperature<br>Rainfall<br>Humidity<br>Soil</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-green-400">Records</h3>
+<p>2000+ Samples</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-green-400">Target</h3>
+<p>Crop Yield</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-green-400">Insight</h3>
+<p>Rainfall + Soil most impactful</p>
+</div>
+
+</div>
+</section>
+
+<!-- FEATURE ENGINEERING -->
+<section class="glass p-12 rounded-3xl space-y-8">
+<h2 class="text-3xl font-bold text-center">Feature Engineering</h2>
+
+<div class="grid md:grid-cols-3 gap-8 text-lg text-center">
+
+<div class="glass p-6 rounded-xl">
+<h3 class="text-green-400 font-bold">Cleaning</h3>
+<p>Handled missing values</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="text-green-400 font-bold">Normalization</h3>
+<p>Scaled data for better learning</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="text-green-400 font-bold">Encoding</h3>
+<p>Converted categorical data</p>
 </div>
 
 </div>
@@ -92,12 +150,12 @@ Frontend → Flask → ML → Output
 <section class="glass p-12 rounded-3xl">
 <h2 class="text-3xl text-center mb-10">System Pipeline</h2>
 
-<div class="flex justify-between text-center text-sm flex-wrap gap-6">
-<div class="glass p-5 rounded-xl flex-1">Input Data</div>
+<div class="flex justify-between text-center text-lg flex-wrap gap-6">
+<div class="glass p-5 rounded-xl flex-1">Input</div>
 <div class="text-green-400 text-2xl">→</div>
-<div class="glass p-5 rounded-xl flex-1">Preprocessing</div>
+<div class="glass p-5 rounded-xl flex-1">Processing</div>
 <div class="text-green-400 text-2xl">→</div>
-<div class="glass p-5 rounded-xl flex-1">Model Training</div>
+<div class="glass p-5 rounded-xl flex-1">Models</div>
 <div class="text-green-400 text-2xl">→</div>
 <div class="glass p-5 rounded-xl flex-1">Prediction</div>
 </div>
@@ -107,22 +165,22 @@ Frontend → Flask → ML → Output
 <section class="glass p-12 rounded-3xl">
 <h2 class="text-3xl text-center mb-10">Model Comparison</h2>
 
-<div class="grid md:grid-cols-3 gap-8 text-center">
+<div class="grid md:grid-cols-3 gap-8 text-center text-lg">
 
 <div class="glass p-6 rounded-xl">
-<h3 class="font-bold">Linear Regression</h3>
+<h3>Linear Regression</h3>
 <p>R²: 0.78</p>
 <p>MSE: 5.12</p>
 </div>
 
 <div class="glass p-6 rounded-xl">
-<h3 class="font-bold">Decision Tree</h3>
+<h3>Decision Tree</h3>
 <p>R²: 0.85</p>
 <p>MSE: 3.94</p>
 </div>
 
 <div class="glass p-6 rounded-xl border border-green-500">
-<h3 class="font-bold text-green-400">Random Forest</h3>
+<h3 class="text-green-400">Random Forest ✔</h3>
 <p>R²: 0.92</p>
 <p>MSE: 2.48</p>
 <p>RMSE: 1.57</p>
@@ -131,7 +189,7 @@ Frontend → Flask → ML → Output
 </div>
 </section>
 
-<!-- FINAL COMPARISON -->
+<!-- COMPARISON -->
 <section class="glass p-12 rounded-3xl">
 <h2 class="text-3xl text-center mb-10">Our Model vs Existing Systems</h2>
 
@@ -139,26 +197,14 @@ Frontend → Flask → ML → Output
 
 <canvas id="comparisonChart"></canvas>
 
-<div class="space-y-4">
+<div class="space-y-4 text-lg">
 
 <div class="flex justify-between bg-red-500/10 p-4 rounded-xl">
-<span>Existing Accuracy</span>
-<span class="text-red-400 font-bold">78%</span>
-</div>
-
-<div class="flex justify-between bg-red-500/10 p-4 rounded-xl">
-<span>Existing R²</span>
-<span class="text-red-400 font-bold">0.80</span>
+<span>Existing Accuracy</span><span class="text-red-400">78%</span>
 </div>
 
 <div class="flex justify-between bg-green-500/10 p-4 rounded-xl">
-<span>KrishiAI Accuracy</span>
-<span class="text-green-400 font-bold">92%</span>
-</div>
-
-<div class="flex justify-between bg-green-500/10 p-4 rounded-xl">
-<span>KrishiAI R²</span>
-<span class="text-green-400 font-bold">0.92</span>
+<span>KrishiAI Accuracy</span><span class="text-green-400">92%</span>
 </div>
 
 </div>
@@ -166,25 +212,16 @@ Frontend → Flask → ML → Output
 </div>
 </section>
 
-<!-- RESULTS -->
-<section class="glass p-12 rounded-3xl">
-<h2 class="text-3xl text-center mb-10">Final Results</h2>
+<!-- CONTRIBUTIONS -->
+<section class="glass p-12 rounded-3xl space-y-8">
+<h2 class="text-3xl text-center">Key Contributions</h2>
 
-<div class="grid md:grid-cols-2 gap-10 items-center">
+<div class="grid md:grid-cols-2 gap-8 text-lg">
 
-<canvas id="resultsChart"></canvas>
-
-<div class="space-y-4">
-<div class="flex justify-between p-4 bg-white/5 rounded-xl">
-<span>Accuracy</span><span class="text-green-400">92%</span>
-</div>
-<div class="flex justify-between p-4 bg-white/5 rounded-xl">
-<span>MSE</span><span class="text-green-400">2.48</span>
-</div>
-<div class="flex justify-between p-4 bg-white/5 rounded-xl">
-<span>RMSE</span><span class="text-green-400">1.57</span>
-</div>
-</div>
+<div class="glass p-6 rounded-xl">✔ Compared multiple ML models</div>
+<div class="glass p-6 rounded-xl">✔ Selected best using metrics</div>
+<div class="glass p-6 rounded-xl">✔ Improved accuracy</div>
+<div class="glass p-6 rounded-xl">✔ Built full pipeline</div>
 
 </div>
 </section>
@@ -195,19 +232,11 @@ Frontend → Flask → ML → Output
 new Chart(document.getElementById('comparisonChart'), {
 type:'bar',
 data:{
-labels:['Accuracy','R²'],
+labels:['Accuracy'],
 datasets:[
-{label:'Existing',data:[78,80],backgroundColor:'#ef4444'},
-{label:'KrishiAI',data:[92,92],backgroundColor:'#22c55e'}
+{label:'Existing',data:[78],backgroundColor:'#ef4444'},
+{label:'KrishiAI',data:[92],backgroundColor:'#22c55e'}
 ]
-}
-});
-
-new Chart(document.getElementById('resultsChart'), {
-type:'bar',
-data:{
-labels:['Accuracy','MSE','RMSE'],
-datasets:[{data:[92,25,15],backgroundColor:'#22c55e'}]
 }
 });
 
