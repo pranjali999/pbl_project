@@ -229,27 +229,42 @@ Analysis showed rainfall and soil type had the highest influence on crop yield p
 </main>
 
 <script>
-new Chart(document.getElementById('comparisonChart'), {
-type:'bar',
-data:{
-labels:['Accuracy'],
-datasets:[
-{label:'Existing',data:[78],backgroundColor:'#ef4444'},
-{label:'KrishiAI',data:[92],backgroundColor:'#22c55e'}
+const ctx = document.getElementById('comparisonChart').getContext('2d');
+
+new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ['Accuracy','R² Score','MSE','RMSE'],
+datasets: [
+{
+label: 'Existing Systems',
+data: [78,80,45,35],
+backgroundColor: '#ef4444',
+borderRadius: 8
+},
+{
+label: 'KrishiAI',
+data: [92,92,25,15],
+backgroundColor: '#22c55e',
+borderRadius: 8
+}
 ]
+},
+options: {
+responsive: true,
+plugins: {
+legend: {
+labels: { color: '#ffffff' }
+}
+},
+scales: {
+y: {
+beginAtZero: true,
+max: 100
+}
+}
 }
 });
-
-let sec=0;
-function startTimer(){
-setInterval(()=>{
-sec++;
-let m=Math.floor(sec/60);
-let s=sec%60;
-document.getElementById('displayTime').innerText=
-`${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
-},1000);
-}
 </script>
 
 </body>
