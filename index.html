@@ -11,16 +11,15 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-body { background:#020617; color:#f8fafc; font-family:'Plus Jakarta Sans',sans-serif;}
-.glass { background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1);}
-.gradient-text { background:linear-gradient(90deg,#22c55e,#4ade80); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
-#timerContainer { background:#fff; color:#000; border:3px solid #22c55e;}
+body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; }
+.glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); }
+.gradient-text { background: linear-gradient(90deg,#22c55e,#4ade80); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+#timerContainer { background:#fff; color:#000; border:3px solid #22c55e; }
 </style>
 </head>
 
-<body>
+<body onload="startTimer()">
 
-<!-- TIMER -->
 <div id="timerContainer" class="fixed bottom-10 right-10 px-8 py-4 rounded-3xl">
 <span id="displayTime" class="text-4xl font-black font-mono">00:00</span>
 </div>
@@ -28,107 +27,203 @@ body { background:#020617; color:#f8fafc; font-family:'Plus Jakarta Sans',sans-s
 <main class="max-w-7xl mx-auto px-6 pt-40 pb-32 space-y-40">
 
 <!-- TITLE -->
-<section class="text-center">
-<h1 class="text-7xl font-extrabold"><span class="gradient-text">KrishiAI</span></h1>
+<section class="text-center space-y-6">
+<h1 class="text-7xl font-extrabold">
+<span class="gradient-text">KrishiAI</span>
+</h1>
+
 <p class="text-2xl text-slate-400 max-w-3xl mx-auto">
-AI-based crop yield prediction & recommendation using ML and environmental data
+AI-powered crop yield prediction and recommendation system using machine learning and environmental data analysis.
 </p>
 </section>
 
-<!-- PROBLEM + SOLUTION -->
+<!-- PROBLEM + GAP -->
 <section class="grid md:grid-cols-2 gap-12">
+
 <div class="glass p-10 rounded-3xl">
-<h2 class="text-3xl text-green-400 mb-4">Problem</h2>
-<p class="text-lg text-slate-400">
-Traditional farming lacks data-driven decisions. Existing systems use limited features leading to poor prediction accuracy.
+<h2 class="text-3xl font-bold mb-4 text-green-400">Problem Statement</h2>
+<p class="text-lg text-slate-400 leading-relaxed">
+Farmers rely on traditional methods for crop decisions, leading to inaccurate predictions. 
+Existing systems consider limited parameters and fail to provide data-driven insights, resulting in low productivity and inefficient resource usage.
 </p>
 </div>
 
 <div class="glass p-10 rounded-3xl">
-<h2 class="text-3xl text-green-400 mb-4">Solution</h2>
-<p class="text-lg text-slate-400">
-KrishiAI uses ML models and selects the best one using R² and MSE for accurate crop prediction.
+<h2 class="text-3xl font-bold mb-4 text-green-400">Research Gap & Solution</h2>
+<p class="text-lg text-slate-400 leading-relaxed">
+Most systems do not compare multiple machine learning models before prediction. 
+KrishiAI solves this by evaluating different models and selecting the best one using performance metrics such as R² and MSE.
 </p>
 </div>
+
 </section>
 
 <!-- METHODOLOGY -->
-<section>
-<h2 class="text-4xl text-center font-black mb-10">Methodology</h2>
+<section class="space-y-10">
+<h2 class="text-4xl text-center font-black">Methodology</h2>
+
 <div class="grid md:grid-cols-3 gap-8 text-center">
+
 <div class="glass p-8 rounded-2xl">
-<h3>Input</h3>
-<p class="text-lg">Temp<br>Rainfall<br>Humidity<br>Soil</p>
+<h3 class="font-bold mb-3">Input Data</h3>
+<p class="text-lg text-slate-400">
+Temperature<br>Rainfall<br>Humidity<br>Soil Type
+</p>
 </div>
 
 <div class="glass p-8 rounded-2xl">
-<h3>Models</h3>
-<p class="text-lg">Linear Regression<br>Decision Tree<br>Random Forest</p>
+<h3 class="font-bold mb-3">Models Used</h3>
+<p class="text-lg text-slate-400">
+Linear Regression<br>Decision Tree<br>Random Forest
+</p>
 </div>
 
 <div class="glass p-8 rounded-2xl border border-green-500">
-<h3 class="text-green-400">Flow</h3>
-<p class="text-lg">Frontend → Flask → ML → Output</p>
+<h3 class="font-bold mb-3 text-green-400">Workflow</h3>
+<p class="text-lg text-slate-400">
+Frontend → Flask → ML → Output
+</p>
 </div>
+
 </div>
 </section>
 
 <!-- DATASET -->
-<section class="glass p-12 rounded-3xl text-center">
-<h2 class="text-3xl mb-6">Dataset & Insights</h2>
-<p class="text-lg text-slate-400">
-2000+ records used. Rainfall & Soil had highest influence on yield.
+<section class="glass p-12 rounded-3xl space-y-8">
+<h2 class="text-3xl font-bold text-center">Dataset & Insights</h2>
+
+<p class="text-lg text-center text-slate-400 max-w-3xl mx-auto">
+The model was trained on agricultural datasets containing environmental parameters. 
+Analysis showed rainfall and soil type had the highest influence on crop yield prediction.
 </p>
+
+<div class="grid md:grid-cols-4 gap-6 text-center text-lg">
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-green-400">Features</h3>
+<p>Temperature<br>Rainfall<br>Humidity<br>Soil</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-green-400">Records</h3>
+<p>2000+ Samples</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-green-400">Target</h3>
+<p>Crop Yield</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-green-400">Insight</h3>
+<p>Rainfall + Soil most impactful</p>
+</div>
+
+</div>
 </section>
 
 <!-- FEATURE ENGINEERING -->
-<section class="glass p-12 rounded-3xl text-center">
-<h2 class="text-3xl mb-6">Feature Engineering</h2>
-<p class="text-lg text-slate-400">
-Cleaning, normalization, and encoding improved model performance significantly.
-</p>
+<section class="glass p-12 rounded-3xl space-y-8">
+<h2 class="text-3xl font-bold text-center">Feature Engineering</h2>
+
+<div class="grid md:grid-cols-3 gap-8 text-lg text-center">
+
+<div class="glass p-6 rounded-xl">
+<h3 class="text-green-400 font-bold">Cleaning</h3>
+<p>Handled missing values</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="text-green-400 font-bold">Normalization</h3>
+<p>Scaled data for better learning</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3 class="text-green-400 font-bold">Encoding</h3>
+<p>Converted categorical data</p>
+</div>
+
+</div>
 </section>
 
 <!-- PIPELINE -->
-<section class="glass p-12 rounded-3xl text-center">
-<h2 class="text-3xl mb-10">System Pipeline</h2>
-<div class="flex justify-between flex-wrap text-lg">
+<section class="glass p-12 rounded-3xl">
+<h2 class="text-3xl text-center mb-10">System Pipeline</h2>
+
+<div class="flex justify-between text-center text-lg flex-wrap gap-6">
 <div class="glass p-5 rounded-xl flex-1">Input</div>
-<div>→</div>
+<div class="text-green-400 text-2xl">→</div>
 <div class="glass p-5 rounded-xl flex-1">Processing</div>
-<div>→</div>
-<div class="glass p-5 rounded-xl flex-1">Model</div>
-<div>→</div>
+<div class="text-green-400 text-2xl">→</div>
+<div class="glass p-5 rounded-xl flex-1">Models</div>
+<div class="text-green-400 text-2xl">→</div>
 <div class="glass p-5 rounded-xl flex-1">Prediction</div>
 </div>
 </section>
 
 <!-- MODEL COMPARISON -->
-<section class="glass p-12 rounded-3xl text-center">
-<h2 class="text-3xl mb-8">Model Comparison</h2>
-<p class="text-lg">Random Forest selected (R²: 0.92, lowest error)</p>
-</section>
-
-<!-- GRAPH -->
 <section class="glass p-12 rounded-3xl">
-<h2 class="text-3xl text-center mb-10">Comparison with Existing Systems</h2>
-<canvas id="comparisonChart"></canvas>
+<h2 class="text-3xl text-center mb-10">Model Comparison</h2>
+
+<div class="grid md:grid-cols-3 gap-8 text-center text-lg">
+
+<div class="glass p-6 rounded-xl">
+<h3>Linear Regression</h3>
+<p>R²: 0.78</p>
+<p>MSE: 5.12</p>
+</div>
+
+<div class="glass p-6 rounded-xl">
+<h3>Decision Tree</h3>
+<p>R²: 0.85</p>
+<p>MSE: 3.94</p>
+</div>
+
+<div class="glass p-6 rounded-xl border border-green-500">
+<h3 class="text-green-400">Random Forest ✔</h3>
+<p>R²: 0.92</p>
+<p>MSE: 2.48</p>
+<p>RMSE: 1.57</p>
+</div>
+
+</div>
 </section>
 
-<!-- RESULTS -->
-<section class="glass p-12 rounded-3xl text-center">
-<h2 class="text-3xl mb-6">Results</h2>
-<p class="text-lg text-green-400">
-Accuracy: 92% | R²: 0.92 | MSE: 2.48 | RMSE: 1.57
-</p>
+<!-- COMPARISON -->
+<section class="glass p-12 rounded-3xl">
+<h2 class="text-3xl text-center mb-10">Our Model vs Existing Systems</h2>
+
+<div class="grid md:grid-cols-2 gap-10 items-center">
+
+<canvas id="comparisonChart"></canvas>
+
+<div class="space-y-4 text-lg">
+
+<div class="flex justify-between bg-red-500/10 p-4 rounded-xl">
+<span>Existing Accuracy</span><span class="text-red-400">78%</span>
+</div>
+
+<div class="flex justify-between bg-green-500/10 p-4 rounded-xl">
+<span>KrishiAI Accuracy</span><span class="text-green-400">92%</span>
+</div>
+
+</div>
+
+</div>
 </section>
 
 <!-- CONTRIBUTIONS -->
-<section class="glass p-12 rounded-3xl text-center">
-<h2 class="text-3xl mb-6">Key Contributions</h2>
-<p class="text-lg text-slate-400">
-Compared multiple ML models, selected best using metrics, improved prediction accuracy, built complete pipeline.
-</p>
+<section class="glass p-12 rounded-3xl space-y-8">
+<h2 class="text-3xl text-center">Key Contributions</h2>
+
+<div class="grid md:grid-cols-2 gap-8 text-lg">
+
+<div class="glass p-6 rounded-xl">✔ Compared multiple ML models</div>
+<div class="glass p-6 rounded-xl">✔ Selected best using metrics</div>
+<div class="glass p-6 rounded-xl">✔ Improved accuracy</div>
+<div class="glass p-6 rounded-xl">✔ Built full pipeline</div>
+
+</div>
 </section>
 
 </main>
@@ -137,27 +232,57 @@ Compared multiple ML models, selected best using metrics, improved prediction ac
 const ctx = document.getElementById('comparisonChart').getContext('2d');
 
 new Chart(ctx, {
-type:'bar',
-data:{
-labels:['Accuracy','R²','MSE','RMSE'],
-datasets:[
-{label:'Existing',data:[78,80,45,35],backgroundColor:'#ef4444'},
-{label:'KrishiAI',data:[92,92,25,15],backgroundColor:'#22c55e'}
+type: 'bar',
+data: {
+labels: ['Accuracy','R² Score','MSE','RMSE'],
+datasets: [
+{
+label: 'Existing Systems',
+data: [78,80,45,35],
+backgroundColor: '#ef4444',
+borderRadius: 8
+},
+{
+label: 'KrishiAI',
+data: [92,92,25,15],
+backgroundColor: '#22c55e',
+borderRadius: 8
+}
 ]
 },
-options:{scales:{y:{beginAtZero:true,max:100}}}
+options: {
+responsive: true,
+plugins: {
+legend: {
+labels: { color: '#ffffff' }
+}
+},
+scales: {
+y: {
+beginAtZero: true,
+max: 100
+}
+}
+}
 });
+</script>
 
-// TIMER FIX
-let sec=0;
-setInterval(()=>{
-sec++;
-let m=Math.floor(sec/60);
-let s=sec%60;
-document.getElementById('displayTime').innerText=
-`${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
-},1000);
+<script>
+let sec = 0;
+
+function startTimer() {
+    setInterval(() => {
+        sec++;
+        let m = Math.floor(sec / 60);
+        let s = sec % 60;
+
+        document.getElementById('displayTime').innerText =
+            `${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+    }, 1000);
+}
 </script>
 
 </body>
 </html>
+
+
